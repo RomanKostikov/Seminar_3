@@ -27,9 +27,14 @@ def NegaFibonacci(n):
         return num2
 
 
-lst = [0]
-k = int(input('Enter number k: '))
-for i in range(1, k + 1):
-    lst.append(Fibonacci(i))
-    lst.insert(0, NegaFibonacci(i))
-print(lst)
+def main():
+    lst = [0]
+    k = int(input('Enter number k: '))
+    for i in range(1, k + 1):
+        lst.append(Fibonacci(i))
+        lst.insert(0, NegaFibonacci(i))
+    print(lst)
+
+
+if __name__ == "__main__":
+    main()
