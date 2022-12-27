@@ -8,14 +8,21 @@
 import os
 os.system('cls')
 
+# первое решение через собственную функцию
+# def binary_number(n):
+#     s = ""
+#     while n != 0:
+#         s = str(n % 2) + s
+#         n //= 2
+#     return s
 
-def binary_number(n):
-    s = ""
-    while n != 0:
-        s = str(n % 2) + s
-        n //= 2
-    return s
 
+# n = int(input("Enter number: "))
+# print(f'{n} => {binary_number(n)}')
 
-n = int(input("Enter number: "))
-print(f'{n} => {binary_number(n)}')
+# второе решение(через встроенную функцию)
+x = int(input("Введите любое натуральное число: "))
+
+n = bin(x)
+print()
+print("Вид введенного числа в двоичной системе счисления :", n[2:])
